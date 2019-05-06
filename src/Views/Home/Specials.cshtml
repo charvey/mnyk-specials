@@ -1,0 +1,34 @@
+﻿@model SpecialListing[]
+@{
+    ViewData["Title"] = "Specials";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Restaurant</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var specialListing in Model)
+        {
+            <tr>
+                <td>@specialListing.RestaurantName</td>
+                <td>@specialListing.MondaySpecials</td>
+                <td>@specialListing.TuesdaySpecials</td>
+                <td>@specialListing.WednesdaySpecials</td>
+                <td>@specialListing.ThursdaySpecials</td>
+                <td>@specialListing.FridaySpecials</td>
+                <td>@specialListing.SaturdaySpecials</td>
+                <td>@specialListing.SundaySpecials</td>
+            </tr>
+        }
+    </tbody>
+</table>
